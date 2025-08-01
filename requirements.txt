@@ -3,12 +3,14 @@ transformers==4.41.2
 torch==2.3.1
 torchvision==0.18.1
 sentence-transformers==3.0.1
+datasets==2.14.0
 
 # Video and Audio Processing
 opencv-python==4.10.0.84
 moviepy==1.0.3
 librosa==0.10.2
 PySceneDetect==0.6.4
+pydub==0.25.1
 
 # Natural Language Processing
 spacy==3.7.5
@@ -18,12 +20,24 @@ nltk==3.8.1
 pandas==2.2.2
 numpy==1.26.4
 Pillow==10.4.0
+scikit-learn==1.5.1
 
 # UI Framework
 streamlit==1.36.0
 plotly==5.22.0
+streamlit-timeline==0.0.2
 
 # Utilities
 python-dotenv==1.0.1
 PyYAML==6.0.1
 tqdm==4.66.4
+python-multipart==0.0.9
+
+# Development tools
+pytest==8.3.2
+black==24.4.2
+flake8==7.1.0
+
+# Optional: GPU acceleration
+# torch-audio==2.3.1
+# accelerate==0.32.1
