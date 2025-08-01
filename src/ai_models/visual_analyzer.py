@@ -4,6 +4,9 @@ from PIL import Image
 from transformers import CLIPProcessor, CLIPModel, pipeline
 from typing import Dict, List, Optional, Tuple
 import logging
+from skimage import color  # Add this line
+from scipy import ndimage  # Add this line
+
 
 logger = logging.getLogger(__name__)
 
