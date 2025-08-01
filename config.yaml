@@ -1,0 +1,27 @@
+# Pre-trained Model Configurations
+models:
+  emotion_text: "j-hartmann/emotion-english-distilroberta-base"
+  emotion_speech: "ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition"
+  face_emotion: "trpakov/vit-face-expression"
+  visual_features: "openai/clip-vit-base-patch32"
+  scene_detection: "MCG-NJU/videomae-base"
+
+# Processing Settings
+video:
+  fps_target: 30
+  max_resolution: [1920, 1080]
+  supported_formats: ['.mp4', '.avi', '.mov', '.mkv']
+
+audio:
+  sample_rate: 16000
+  chunk_duration: 5  # seconds
+
+script:
+  supported_formats: ['.txt', '.srt', '.ass']
+  
+# AI Suggestion Thresholds
+suggestions:
+  emotion_change_threshold: 0.3
+  scene_change_threshold: 0.4
+  speaker_change_weight: 0.8
+  minimum_cut_interval: 2.0  # seconds
