@@ -5,23 +5,58 @@ models:
   face_emotion: "trpakov/vit-face-expression"
   visual_features: "openai/clip-vit-base-patch32"
   scene_detection: "MCG-NJU/videomae-base"
+  sentiment_analyzer: "cardiffnlp/twitter-roberta-base-sentiment-latest"
 
 # Processing Settings
 video:
   fps_target: 30
   max_resolution: [1920, 1080]
-  supported_formats: ['.mp4', '.avi', '.mov', '.mkv']
+  supported_formats: ['.mp4', '.avi', '.mov', '.mkv', '.webm']
+  frame_extraction_interval: 1.0  # seconds
+  max_duration: 3600  # seconds (1 hour)
 
 audio:
   sample_rate: 16000
   chunk_duration: 5  # seconds
+  supported_formats: ['.wav', '.mp3', '.m4a', '.flac']
+  noise_reduction: true
 
 script:
-  supported_formats: ['.txt', '.srt', '.ass']
+  supported_formats: ['.txt', '.srt', '.ass', '.vtt']
+  encoding: 'utf-8'
+  max_lines: 10000
   
 # AI Suggestion Thresholds
 suggestions:
   emotion_change_threshold: 0.3
   scene_change_threshold: 0.4
+  speaker_change_threshold: 0.6
   speaker_change_weight: 0.8
   minimum_cut_interval: 2.0  # seconds
+  maximum_suggestions: 100
+
+# Timeline Settings
+timeline:
+  time_unit: 'seconds'
+  zoom_levels: [1, 5, 10, 30, 60]
+  default_zoom: 10
+
+# UI Settings
+ui:
+  theme: 'light'
+  sidebar_width: 300
+  timeline_height: 400
+  suggestion_panel_height: 300
+
+# Performance Settings
+performance:
+  max_workers: 4
+  chunk_processing: true
+  enable_caching: true
+  cache_ttl: 3600  # seconds
+
+# Export Settings
+export:
+  formats: ['json', 'csv', 'xml']
+  include_metadata: true
+  timestamp_precision: 2  # decimal places
