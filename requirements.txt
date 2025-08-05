@@ -6,7 +6,7 @@ sentence-transformers==3.0.1
 datasets==2.14.0
 
 # Video and Audio Processing
-opencv-python==4.10.0.84
+opencv-python-headless==4.10.0.84
 moviepy==1.0.3
 librosa==0.10.2
 scenedetect==0.6.4
@@ -21,6 +21,7 @@ pandas==2.2.2
 numpy==1.26.4
 Pillow==10.4.0
 scikit-learn==1.5.1
+scikit-image==0.25.2
 
 # UI Framework
 streamlit==1.36.0
