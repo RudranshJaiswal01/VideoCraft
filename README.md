@@ -35,7 +35,7 @@ streamlit run main.py
 - **trpakov/vit-face-expression**: Facial emotion recognition
 
 ## 📁 Project Structure
-
+```
 ai-film-editor/
 ├── README.md
 ├── requirements.txt
@@ -73,7 +73,7 @@ ai-film-editor/
 │   └── cache/
 └── tests/
     └── __init__.py
-
+```
 
 ## ⚙️ Configuration
 
